@@ -1,0 +1,734 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap');
+/*loading font that myhouse wants us to use*/
+
+/*Extra fonts go here*/
+@font-face {
+    font-family: 'Druk Wide Bold'; /* a name to be used later in the font shorthand */
+    src: url('../font/Druk-Wide-Bold.ttf') format('truetype'); /* URL to font file, relative to the CSS file, and format */
+
+  }
+@font-face{
+    font-family: 'Arial Black';
+    src: url('../font/ariblk.ttf') format('truetype');
+}
+
+
+
+*{
+    max-width: 100vw;
+
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    
+}
+/* background color for main body of site*/
+
+body{
+    background-color: black;
+    padding-top: 5px;
+}
+
+/* for links in website */
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover a:active{
+    text-decoration: underline;
+}
+
+/* These Items below are for the navbar used in this project*/
+
+.navLogo{
+    width: 189px;
+    height: 147px;
+    flex-shrink: 0;
+    display:flex;
+    fill: url('public/images/my-house-logo.svg'), lightgray 50% / cover no-repeat;
+}
+
+.navBar{
+    font-family: 'Titillium Web', 'Arial', sans-serif;
+    height: 140px;
+    flex-shrink: 0;
+    color:#FFF;
+    background-color:rgb(54, 52, 54);
+    position:fixed;
+    top:0;
+    left:0;
+    /*  */
+    width: 90.15%;
+    z-index: 1000; /*This ensures the navbar stays above other content*/
+    border-bottom: 3px solid #fff; 
+    margin:auto;
+    margin-right:45px;
+    margin-left:71px;
+    padding:0;
+    margin-bottom: 10px;
+    display:flex;
+
+}
+
+.navBar ul{
+    list-style: none;
+    position:absolute;
+    top:0;
+    right:0
+}
+
+.navBar li{
+    display: inline;
+    margin-right: 20px;
+
+}
+
+/*Under line affect for navBar*/
+.navBar a {
+    text-decoration: none;
+    position: relative;
+    color: inherit;
+}
+
+.navBar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px; /*You can adjust the height of the underline*/
+    bottom: 0;
+    left: 0;
+    background-color: #FFF; /*Change this to the color you want for the underline*/
+    transform: scaleX(0);/*Initially, set the scale to 0 so it's not visible*/
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-orgin: center;
+
+    transition:transform 0.3s;
+    -webkit-transition:transform 0.3s;
+    -moz-transition:transform 0.3s;
+    -ms-transition:transform 0.3s;
+    -o-transition:transform 0.3s;
+}
+
+.navBar a:hover::before {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1); /* When hovering, scale the underline to 100% width */
+}
+
+
+
+/* These items below are for the footer for this page.*/
+footer{
+    height: 150px;
+}
+
+.footLogo{
+    width: 189px;
+    height: 147px;
+    flex-shrink:0;
+    fill: url('public/images/my-house-logo.svg'), lightgray 50% / cover no-repeat;
+    display:flex;
+    float:left;
+}
+
+
+.footerBar{
+    
+    font-family: 'Titillium Web', sans-serif;
+    color:#FFF;
+    display:flex;
+    position: relative;
+    justify-content: flex-start; /*Aligns childer (footer content) to the start (left) of the container*/
+    align-items:center; /* Vertical alignment, could be flex-start if you want content at the top*/
+    padding-bottom: 20px;
+    
+    margin-bottom:auto;
+    height: 40%;
+    width: 100%; /* Ensures the footer takes the full width  */
+    z-index:10;
+}
+
+.footerLists{
+    display:flex; /* make the footerList a flex container */
+    flex-direction: row; /* Lay out the <ul> elements side by side */
+    justify-content:flex-start;  /* Aligns the <ul> elements to the start (left) of the container */
+    align-items: flex-start; /* Aligns items to the top of the container */
+    gap:20px;/* Align the list too the top of the container */
+    padding:20px;
+}
+
+.footerList{
+    list-style:none;
+    padding:50px;
+    /* margin:auto; */
+}
+
+.footerList li{
+    margin-bottom: 20px; /*space between items*/
+    display:block;/* Makes sure <li> elements go on top of each other */
+    
+}
+
+/* Hover underline in Footer*/
+
+.footerBar a {
+    text-decoration: none;
+    position: relative;
+    color: inherit;
+    
+}
+
+.footerBar a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px; /* You can adjust the height of the underline */
+    bottom: 0;
+    left: 0;
+    background-color: #FFF; /* Change this to the color you want for the underline */
+    
+    transform: scaleX(0);/*Initially, set the scale to 0 so it's not visible*/
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    -moz-transform-origin: center;
+    -ms-transform-origin: center;
+    -o-transform-orgin: center;
+
+    transition:transform 0.3s;
+    -webkit-transition:transform 0.3s;
+    -moz-transition:transform 0.3s;
+    -ms-transition:transform 0.3s;
+    -o-transition:transform 0.3s;
+}
+
+.footerBar a:hover::before {
+    transform: scaleX(1); /* When hovering, scale the underline to 100% width */
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+}
+
+/*Index related settings*/
+.index-main-picture-background{
+    position:relative;
+    width: 1298px;
+    height: 730px;
+    background: #2C292C;
+    box-shadow: 1000px 1000px 1000px;
+    border-radius: 11px;
+    margin:auto;
+    margin-bottom: 20px;
+    
+
+}
+
+.image-overlay-container{
+    position: relative;
+    display: inline-block; /* so it takes the width of the image*/
+    width: 100%;
+}
+
+.index-main-pictures{
+    display:block; /*Removes any unwanted space below the image*/
+    width:100%;
+    height:730px;
+    object-fit:cover;
+
+
+}
+
+.overlay-content{
+    position: absolute; /* Absolutely position text/button */
+    top:50%; /* Adjust these values for*/
+    left:50%; /* your desired location */
+
+    transform: translate(-50%, -50%); /* center the content */
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    
+    text-align: center; /* aligns center text*/
+}
+
+.home-button{
+    /*General button layout*/
+    width:215px;
+    height:51px;
+
+    border-radius: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    -ms-border-radius: 9px;
+    -o-border-radius: 9px;
+    border:1px;
+    background: #2C292C; 
+    cursor: pointer;
+
+    /*Text inside button*/
+
+    color: #FFF;
+    font-family: 'Arial Black';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+}
+
+/*On Hover*/
+.home-button:hover{
+    color:#000;
+    background-color: #FFF;
+}
+
+.header-index-big{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Druk Wide Bold', sans-serif;
+    
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-shadow: /*makes a sort of text border around the font for easier reading*/
+    -1px -1px 0 #000, /* top left */
+    1px -1px 0 #000, /* top right */
+    -1px 1px 0 #000, /* bottom left */
+    1px 1px 0 #000; /* bottom right */;
+}
+
+.header-index-small{
+    color: #FFF;
+    font-family: 'Druk Wide Bold', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    /*Adds small border around text for easier reading */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border-bottom: 3px solid #FFF;
+    padding-bottom: 5px;
+
+}
+
+.header-onimage-index{
+    color: #FFF;
+    font-family: 'Druk Wide Bold', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    /*Adds small border around text for easier reading */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border-bottom: 3px solid #FFF;
+    padding-bottom: 5px;
+}
+.text-onimage-index{
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Druk Wide Bold', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+
+.index-infoboxes-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    position: relative;
+
+    margin:auto;
+    margin-top: 85px;
+    margin-bottom: 100px;
+    
+    width: 85%;
+    height: 50%;
+
+   
+
+}
+
+.index-infoboxes-insidebox{
+    margin:auto;
+    display:flex;
+    width: 447px;
+    height: 288px;
+    margin-top: 55px;
+    border-style:solid;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    border-color:white;
+    color:white;
+
+
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.index-infoboxes-insidebox h1{
+    color: #FFF;
+    font-family: Arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+
+}
+.index-infoboxes-insidebox p{
+    color: #FFF;
+    font-family: Arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* creates 4 equal columns */
+    gap: 20px; 
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #000000;
+    background-color: #000000;
+    padding: 16px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+.product-title {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    color: #d2d2d2;
+    margin-bottom: 12px;
+}
+
+.add-to-cart {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 50%;
+    box-sizing: border-box; 
+    border-radius: 20px; 
+    display: inline-block;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .add-to-cart {
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .add-to-cart {
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-to-cart {
+        border-radius: 10px;
+    }
+}
+
+
+/* CART */
+.cart-link {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    font-size: 1.5em; 
+    margin-right: 0.5em;
+}
+
+.cart-count {
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 0.25em 0.5em;
+    font-size: 0.9em;
+    vertical-align: top;
+    margin-left: -10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+main {
+    width: 90.15%; /* Same as navbar width */
+    margin-left: 71px; /* Same as navbar left margin */
+    margin-right: 45px; /* Same as navbar right margin */
+    margin-bottom: 10px; /* Adjust as needed */
+    padding-top: 10px; /* Adjust as needed */
+    background-color: black; /* Adjust color as needed */
+    padding-bottom: 200px; /* Adjust as needed */
+    margin-top: 150px; /* Adjust as needed to push down from navbar */
+}
+
+#cart-items {
+    background-color: #000000; /* Adjust background color as needed */
+    padding: 16px; /* Adjust padding as needed */
+    border: 1px solid #ffffff; /* Adjust border style as needed */
+}
+
+
+.cart-item-image {
+    flex: 0 0 100px; 
+    padding: 5px;
+}
+
+.cart-item-image img {
+    width: 100%; 
+    height: auto;
+}
+
+.cart-item-info {
+    flex-grow: 1;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.cart-item-name {
+    /* Style for item name */
+}
+
+.cart-item-price {
+    font-weight: bold;
+    min-width: 100px;
+    color: white;
+    text-align: right;
+}
+
+
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: #ff3333;
+}
+/* ... existing styles ... */
+
+.navbar-fade {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+
+.cart-icon span {
+    margin-left: 5px;
+    font-size: 0.7em;
+  }
+
+  /* .cart-counter {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+} */
+
+.merchandise-title {
+    font-family: Druk Wide Bold;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin: 20px 0;
+  }
+  
+  .line-img{
+    margin-left: 42%;
+
+  }
+
+
+  /* checkout page */
+.checkout-items {
+    margin: 250px ;
+    padding: 20px;
+    margin-top: 100px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: #232124;
+  }
+  
+  .checkout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+  }
+  
+  .checkout-item:last-child {
+    border-bottom: none;
+  }
+  
+  .checkout-item img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 20px;
+    border-radius: 4px;
+  }
+  
+  .checkout-item div {
+    flex-grow: 1;
+  }
+  
+  .checkout-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: white;
+  }
+  
+  .checkout-item p {
+    margin: 0;
+    color: whitesmoke;
+    font-size: 1em;
+  }
+  
+/* Checkout Page Heading Styles */
+h1 {
+    color: #FFFFFF; /* White color text */
+    text-align: center; /* Center the heading */
+    font-family: 'Druk Wide Bold';
+    font-weight: 700; /* Make the font bold */
+    font-size: 40px; /* Set the size of the font */
+    margin-bottom: 20px; /* Add some space at the bottom */
+    text-transform: uppercase; /* Capitalize all letters */
+    letter-spacing: 1.5px; /* Add spacing between letters for a more expansive effect */
+  }
+  
+  /* If you have a specific class for the h1 tag, e.g., `checkout-title`, use that class name instead */
+  .checkout-title {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Druk Wide Bold';
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+
+  .line-img-checkout{
+    margin-left: 842px;
+  }
+
+.checkout-total {
+    text-align: right; /* Align total price to the right */
+    margin: 245px; /* Add margin for spacing */
+    padding: 20px; /* Add padding for space inside the total box */
+    border-top: 1px solid #ddd; /* Add a border at the top to separate it from the items list */
+    color: #fff; /* Text color for the total price */
+    font-size: 1.5em; /* Increase the font size for better visibility */
+    background-color: #333; /* Background color for the total price box */
+    border-radius: 4px; /* Optional: rounded corners for the total price box */
+    background-color: #232124;
+  }
+  
+  /* Ensure that your total row is not too wide in case of very large screens */
+  .checkout-total h2 {
+    max-width: 600px; /* Same width as your items list for alignment */
+    margin-left: auto; /* Auto margin for right alignment */
+    margin-right: 0; /* Align to the right */    
+  }
+  
+
+.proceed-to-checkout-btn {
+    display: block; /* Makes the button a block element to fit the container width */
+    width: 200px; /* Set a fixed width or use percentage for responsive design */
+    padding: 10px 20px; /* Padding inside the button */
+    margin: 20px auto; /* Center the button horizontally */
+    background-color: #007bff; /* Bootstrap primary button color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text inside the button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change mouse pointer on hover */
+    font-size: 1em; /* Text size */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .proceed-to-checkout-btn:hover {
+    background-color: #0056b3; /* Darken the button color on hover for feedback */
+  }
+  

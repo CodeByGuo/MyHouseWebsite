@@ -1,0 +1,79 @@
+.contact-form-wrap{
+    display: flex;
+    position: relative;
+    color:#FFF;
+    margin:auto;
+    width: 840px;
+    height: 766px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background:#2C292C;
+}
+
+.contact-form-content{
+    display: flexbox;
+}
+
+
+.submit-button{
+    width: 211.654px;
+    height: 51px;
+    flex-shrink: 0;
+
+    border-radius: 9px;
+    border: 1px solid #FFF;
+    background: #111;
+
+    color: #FFF;
+    font-family: "Arial Black";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.submit-button:hover{
+    color:#000;
+    background-color: #FFF;
+    border-color:#000;
+}
+
+.contact-textbox{
+    width: 331px;
+    height: 61px;
+    flex-shrink: 0;
+}
+.emailaddress-textbox{
+    width: 735px;
+    height: 61px;
+    flex-shrink: 0;
+}
+.email-message-textbox{
+    width: 735px;
+    height: 319px;
+    flex-shrink: 0;
+    
+}
+
+.contact-textbox .email-textbox{
+    font-size: 24px;
+}
+
+label{
+    color: #FFF;
+    font-family: 'Arial';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+input[type="text"] textarea
+{
+    font-size:24px;
+    font-family: 'Arial';
+}
+
